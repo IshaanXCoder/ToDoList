@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+  }
+  body{
+    background: linear-gradient(to right, #7f00ff, #e100ff); 
+
+
+  }
+
+  ul {
+    padding: 0;
+  }
+  
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    list-style-type: none;
+
+  }
+  
+  
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+    
+    margin: 0, 5%, 0, 5%;
+  }
+  
+  
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  
+  
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .header {
+        
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF); 
+    background: linear-gradient(to right, #92FE9D, #00C9FF); 
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    margin: 5% 10% 1% 10%
+  }
+  
+  
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 30px;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+  
+  
+  .addBtn {
+    padding: 10px;
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: linear-gradient(to left, #2980b9, #6dd5fa, #ffffff); 
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 1;overflow: hidden;
+    padding: 12px 30px;
+    border-radius: 60px;
+    display: inline-block;
+  }
+  
+  
+
+.addBtn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(243, 80%, 62%);
+    opacity: 0.1;
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+    will-change: transform;
+}
+
+.addBtn:hover::before  {
+    transform-origin: 0 0;
+    transform: scaleX(1);
+}
+
+
+
